@@ -39,3 +39,4 @@ jspm_packages
 # PC Development
 **/*.bat
 build
+dist
