@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "outDir": "build",
+    "rootDir": ".",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+     "types": [
+       "core-js",
+       "node"
+     ]
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "awesomeTypescriptLoaderOptions": {
+    "useWebpackText": true
+  },
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "atom": { "rewriteTsconfig": false }
+}
