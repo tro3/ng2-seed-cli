@@ -3,10 +3,12 @@ import { RouterModule } from '@angular/router'
 
 import { ProjectComponent } from './project.component'
 import { ProjectDetailModule } from './project-detail/project-detail.module'
+import { ProjectListModule } from './project-list/project-list.module'
 
 @NgModule({
   imports: [
     ProjectDetailModule,
+    ProjectListModule,
     RouterModule
   ],
   declarations: [

@@ -1,11 +1,12 @@
 import { Routes } from '@angular/router'
 
 import { ProjectDetailComponent } from './project-detail.component'
-import { ProjectResolveService } from './project-resolve.service'
+import { ProjectDetailResolveService } from './project-detail-resolve.service'
 
 export const ProjectDetailRoutes: Routes = [
   {
-    path: 'project-detail',
+    path: ':id',
+    resolve: {item: ProjectDetailResolveService},
     component: ProjectDetailComponent,
     children: [
     ],

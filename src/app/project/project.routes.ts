@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router'
 
-import { ProjectCanActivateService } from './project-can-activate.service'
 import { ProjectComponent } from './project.component'
 import { ProjectDetailRoutes } from './project-detail/project-detail.routes'
+import { ProjectListRoutes } from './project-list/project-list.routes'
 
 export const ProjectRoutes: Routes = [
   {
@@ -11,5 +11,6 @@ export const ProjectRoutes: Routes = [
     children: [
       ...ProjectDetailRoutes
     ],
-  },
+  },,
+  ...ProjectListRoutes
 ]

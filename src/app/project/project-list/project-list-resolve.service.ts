@@ -2,10 +2,10 @@ import { Injectable } from '@angular/core'
 import { Observable } from 'rxjs/Observable';
 import { Router, Resolve, ActivatedRouteSnapshot } from '@angular/router'
 
-import { ApiService } from '##rootPath##/common/api.service'
+import { ApiService } from '../../common/api.service'
 
 @Injectable()
-export class ##entityName## implements Resolve<any> {
+export class ProjectListResolveService implements Resolve<any> {
 
   constructor(
     private router: Router,
@@ -13,7 +13,7 @@ export class ##entityName## implements Resolve<any> {
   ) {}
 
   resolve(route: ActivatedRouteSnapshot): Observable<any> {
-    return this.api.find('##name##', route.params['query'])
+    return this.api.find('projects', route.params['query'])
   }
 
 }

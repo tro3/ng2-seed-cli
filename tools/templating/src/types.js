@@ -26,16 +26,16 @@ module.exports = {
     templates: [{
       name: 'resolve.service.ts',
       file: 'api-resolve.service.ts',
-      imports: ['routes.ts'],
-      listItems: [],
+      imports: ['module.ts', 'routes.ts'],
+      listItems: ['providers'],
     }],
   },
   resolveService: {
     dir: false,
     templates: [{
       name: 'resolve.service.ts',
-      imports: ['routes.ts'],
-      listItems: [],
+      imports: ['module.ts', 'routes.ts'],
+      listItems: ['providers'],
     }],
   },
   canActivateService: {
@@ -43,7 +43,7 @@ module.exports = {
     templates: [{
       name: 'can-activate.service.ts',
       imports: ['routes.ts'],
-      listItems: [],
+      listItems: ['providers'],
     }],
   },
   commonModule: {

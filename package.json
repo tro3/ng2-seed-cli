@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "An Angular 2 advanced seed project with templating cli",
   "scripts": {
-    "build": "webpack --inline --colors --progress --display-error-details --display-cached",
+    "build": "webpack --progress --colors",
     "watch": "npm run build -- --watch",
     "server": "webpack-dev-server --inline --progress --port 8080  --content-base src",
     "start": "npm run server"

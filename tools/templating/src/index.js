@@ -79,7 +79,7 @@ module.exports = main = (command) => {
 
 }
 
-main('project/project.resolveService')
+//main('project/project.resolveService')
 //main('common.commonModule')
 //main('common/view.component')
 //main('common/api.service')

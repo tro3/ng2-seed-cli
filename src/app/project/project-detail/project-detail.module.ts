@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core'
 import { RouterModule } from '@angular/router'
 
 import { ProjectDetailComponent } from './project-detail.component'
+import { ProjectDetailResolveService } from './project-detail-resolve.service'
 
 @NgModule({
   imports: [
@@ -11,6 +12,7 @@ import { ProjectDetailComponent } from './project-detail.component'
     ProjectDetailComponent
   ],
   providers: [
+    ProjectDetailResolveService
   ],
   exports: [
     ProjectDetailComponent
