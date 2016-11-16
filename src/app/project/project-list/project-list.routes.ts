@@ -5,8 +5,9 @@ import { ProjectListResolveService } from './project-list-resolve.service'
 
 export const ProjectListRoutes: Routes = [
   {
-    path: 'project-list',
+    path: '',
     component: ProjectListComponent,
+    resolve: {items: ProjectListResolveService},
     children: [
     ],
   }

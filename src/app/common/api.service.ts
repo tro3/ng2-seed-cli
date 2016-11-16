@@ -4,15 +4,18 @@ import { Observable } from 'rxjs/Observable';
 
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/throw';
 
 @Injectable()
 export class ApiService {
 
   constructor(private http: Http) { }
 
-  find(collection: string, query: any, options?: any): Observable<any[]> {
+  find(collection: string, query?: any, options?: any): Observable<any[]> {
     //    return this.http.get(`${BASEURL}/${collection}`)//'/assets/data.json')
-    return this.http.get(`/api/${collection}?query=${JSON.stringify(query)}`)
+    let url = `/api/${collection}`
+    if (query) url += `?query=${JSON.stringify(query)}`
+    return this.http.get(url)
       .map(res => res.json()._items)
       .catch(this.handleError);
   }

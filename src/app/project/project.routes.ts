@@ -6,11 +6,11 @@ import { ProjectListRoutes } from './project-list/project-list.routes'
 
 export const ProjectRoutes: Routes = [
   {
-    path: 'project',
+    path: 'projects',
     component: ProjectComponent,
     children: [
-      ...ProjectDetailRoutes
-    ],
-  },,
-  ...ProjectListRoutes
+      ...ProjectDetailRoutes,
+      ...ProjectListRoutes
+    ]
+  }
 ]

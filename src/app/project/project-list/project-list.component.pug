@@ -1,5 +1,13 @@
 // project-list pug
 
-h1 ProjectListComponent
+h3 ProjectListComponent
 
-router-outlet
+table.table.table-hover
+  thead
+    tr
+      th Id
+      th Name
+  tbody
+    tr(*ngFor="let item of items", (click)="goToDetail(item)")
+      td {{item._id}}
+      td {{item.name}}
