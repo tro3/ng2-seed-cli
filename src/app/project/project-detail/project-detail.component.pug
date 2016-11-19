@@ -1,8 +1,18 @@
 // project-detail pug
 
-h3 ProjectDetailComponent
+.row
+  .col-md-12
+    .pull-left
+      h3 ProjectDetailComponent
+    .pull-right
+      button.btn.btn-default(*ngIf="!editMode", (click)="edit()") Edit
+      button.btn.btn-default(*ngIf="editMode", (click)="save()") Save
+      button.btn.btn-default(*ngIf="editMode", (click)="cancel()") Cancel
 
-label Name
-p {{item.name}}
+.row
+  .col-md-12
+    label Name
+    .form-control-static(*ngIf="!editMode") {{item.name}}
+    input.form-control(*ngIf="editMode", [(ngModel)]="buffItem.name")
 
 router-outlet

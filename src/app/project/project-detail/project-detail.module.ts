@@ -1,3 +1,5 @@
+import { CommonModule } from '@angular/common'
+import { FormsModule } from '@angular/forms'
 import { NgModule } from '@angular/core'
 import { RouterModule } from '@angular/router'
 
@@ -6,7 +8,9 @@ import { ProjectDetailResolveService } from './project-detail-resolve.service'
 
 @NgModule({
   imports: [
-    RouterModule,
+    CommonModule,
+    FormsModule,
+    RouterModule
   ],
   declarations: [
     ProjectDetailComponent

@@ -30,7 +30,7 @@ export class ApiService {
   update(collection: string, id: number, data: any, options?: any): Observable<any> {
     //    return this.http.get(`${BASEURL}/${collection}`)//'/assets/data.json')
     //  return Observable.of(data).delay(1000)
-    return this.http.put(
+    return this.http.post(
       `/api/${collection}/${id}`,
       JSON.stringify(data),
       new RequestOptions({ headers: new Headers({ 'Content-Type': 'application/json' }) })
