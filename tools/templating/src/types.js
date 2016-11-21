@@ -3,31 +3,67 @@
 // Keep in length order
 
 module.exports = {
-  detailComponent: {
-    dir: true,
+  listModule: {
+    dir: 'list',
     templates: [{
-      name: 'detail.component.ts',
+      name: 'list.module.ts',
+      file: 'form.module.ts',
       imports: ['module.ts'],
+      listItems: ['imports'],
+    },{
+      name: 'list.component.ts',
+      imports: ['module.ts', 'routes.ts'],
+      listItems: ['declarations', 'exports'],
+    },{
+      name: 'list-resolve.service.ts',
+      file: 'resolve.service.ts',
+      imports: ['module.ts', 'routes.ts'],
+      listItems: ['providers'],
+    },{
+      name: 'list-auth.service.ts',
+      file: 'can-activate.service.ts',
+      imports: ['module.ts', 'routes.ts'],
+      listItems: ['providers'],
+    },{
+      name: 'list.component.pug',
+    },{
+      name: 'list.component.css',
+      file: 'component.css',
+    },{
+      name: 'list.routes.ts',
+      imports: ['routes.ts'],
+      addRoute: true,
+    }],
+  },
+  detailModule: {
+    dir: 'detail',
+    templates: [{
+      name: 'detail.module.ts',
+      file: 'form.module.ts',
+      imports: ['module.ts'],
+      listItems: ['imports'],
+    },{
+      name: 'detail.component.ts',
+      imports: ['module.ts', 'routes.ts'],
       listItems: ['declarations', 'exports'],
     },{
       name: 'detail-resolve.service.ts',
       imports: ['module.ts', 'routes.ts'],
       listItems: ['providers'],
     },{
+      name: 'detail-auth.service.ts',
+      file: 'can-activate.service.ts',
+      imports: ['module.ts', 'routes.ts'],
+      listItems: ['providers'],
+    },{
       name: 'detail.component.pug',
-      file: 'component.pug',
     },{
       name: 'detail.component.css',
       file: 'component.css',
-    }],
-  },
-  apiResolveService: {
-    dir: false,
-    templates: [{
-      name: 'resolve.service.ts',
-      file: 'api-resolve.service.ts',
-      imports: ['module.ts', 'routes.ts'],
-      listItems: ['providers'],
+    },{
+      name: 'detail.routes.ts',
+      imports: ['routes.ts'],
+      addRoute: true,
     }],
   },
   resolveService: {
@@ -42,7 +78,7 @@ module.exports = {
     dir: false,
     templates: [{
       name: 'can-activate.service.ts',
-      imports: ['routes.ts'],
+      imports: ['module.ts', 'routes.ts'],
       listItems: ['providers'],
     }],
   },

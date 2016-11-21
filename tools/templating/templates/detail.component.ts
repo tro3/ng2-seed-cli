@@ -1,10 +1,22 @@
-import {Component} from '@angular/core';
-import {apiService} from 'common'
+import { ActivatedRoute } from '@angular/router'
+import { Component } from '@angular/core';
+
+import { ApiService } from '##rootPath##/common/api.service'
+import { BusyService } from '##rootPath##/common/busy.service'
+import { DetailComponent } from '##rootPath##/common/detail.component'
 
 @Component({
   selector: 'ng2-cli-##fullName##',
-  templateUrl: '##completeName##.pug'
+  templateUrl: '##completeName##.pug',
   styleUrls: ['##completeName##.css'],
 })
-export class ##entityName## {
+export class ##entityName## extends DetailComponent {
+  collection = "##fullName##"
+
+  constructor(
+    protected route: ActivatedRoute,
+    protected api: ApiService,
+    protected busy: BusyService,
+  ) {super(route, api, busy)}
+
 }

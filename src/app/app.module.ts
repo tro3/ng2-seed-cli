@@ -8,6 +8,7 @@ import { AppComponent } from './app.component'
 import { CommonModule } from './common/common.module'
 import { HomeComponent } from './home/home.component'
 import { ProjectModule } from './project/project.module'
+import { ShipmentModule } from './shipment/shipment.module'
 import { rootRouterConfig } from './app.routes'
 
 @NgModule({
@@ -22,6 +23,8 @@ import { rootRouterConfig } from './app.routes'
     HttpModule,
     ProjectModule,
     RouterModule.forRoot(rootRouterConfig),
+    ShipmentModule,
+    ShipmentModule
   ],
   providers   : [ ],
   bootstrap   : [AppComponent]

@@ -17,6 +17,7 @@ function getPath(command, type) {
   let path = command.replace('\\', '/').split('/').slice(0,-1).join('/')
   const dir = types[type].dir
   if (dir) path += `/${getFullName(command)}`
+  if (typeof(dir) == 'string') path += `-${dir}`
   return path
 }
 
@@ -73,6 +74,7 @@ function getContext(config, template) {
     path: config.path,
     name: config.name,
     type: config.type,
+    pluralName: config.name + 's',
     template: template,
     fileName: fileName,
     fileExt: templateExt,

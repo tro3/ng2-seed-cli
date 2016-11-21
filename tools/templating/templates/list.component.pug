@@ -1,0 +1,15 @@
+// ##fullName## pug
+
+h1 ##entityName##
+
+h2(*ngIf="!items || items.length==0") No items resolved
+
+table.table.table-hover
+  thead
+    tr
+      th Id
+      th Name
+  tbody
+    tr(*ngFor="let item of items", (click)="goToDetail(item)")
+      td {{item._id}}
+      td {{item.name}}
