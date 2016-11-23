@@ -46,7 +46,16 @@ function processTemplate(template, context) {
 
 let main;
 module.exports = main = (command) => {
-    const cfg = parseCommand(command)
+  const cfg = parseCommand(command)
+
+  if (cfg.type == 'object') {
+    if (cfg.path) cfg.path += '/'
+    main(`${cfg.path}${cfg.name}.objectModule`)
+    main(`${cfg.path}${cfg.name}/${cfg.name}.listModule`)
+    main(`${cfg.path}${cfg.name}/${cfg.name}.detailModule`)
+  }
+
+  else {
     const outPath = `${rootDir}/${cfg.path}`
     if (!exists(outPath)) fs.mkdirSync(outPath)
     for (let template of cfg.attrs.templates) {
@@ -74,9 +83,8 @@ module.exports = main = (command) => {
         addRoute(up.absPath, `...${ctxt.entityName}`)
         console.log(`Added ${ctxt.entityName} into ${up.absPath.slice(rootDir.length+1)} routes list`)
       }
-
     }
-
+  }
 }
 
 //main('project/project.resolveService')

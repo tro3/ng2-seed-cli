@@ -1,0 +1,5 @@
+/* ##fullName## css */
+
+.table-hover tbody tr {
+  cursor: pointer;
+}

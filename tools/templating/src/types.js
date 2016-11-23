@@ -3,6 +3,29 @@
 // Keep in length order
 
 module.exports = {
+  object: {},
+  objectModule: {
+    dir: true,
+    templates: [{
+      name: 'module.ts',
+      imports: ['module.ts'],
+      listItems: ['imports'],
+    },{
+      name: 'component.ts',
+      imports: ['module.ts', 'routes.ts'],
+      listItems: ['declarations', 'exports'],
+    },{
+      name: 'component.pug',
+      file: 'router.component.pug',
+    },{
+      name: 'component.css',
+    },{
+      name: 'routes.ts',
+      file: 'object.routes.ts',
+      imports: ['routes.ts'],
+      addRoute: true,
+    }],
+  },
   listModule: {
     dir: 'list',
     templates: [{
@@ -28,11 +51,10 @@ module.exports = {
       name: 'list.component.pug',
     },{
       name: 'list.component.css',
-      file: 'component.css',
     },{
       name: 'list.routes.ts',
       imports: ['routes.ts'],
-      addRoute: true,
+      //addRoute: true,
     }],
   },
   detailModule: {
@@ -63,7 +85,7 @@ module.exports = {
     },{
       name: 'detail.routes.ts',
       imports: ['routes.ts'],
-      addRoute: true,
+      //addRoute: true,
     }],
   },
   resolveService: {
