@@ -11,7 +11,7 @@ import { DetailComponent } from '##rootPath##/common/detail.component'
   styleUrls: ['##completeName##.css'],
 })
 export class ##entityName## extends DetailComponent {
-  collection = "##fullName##"
+  collection = "##pluralName##"
 
   constructor(
     protected route: ActivatedRoute,

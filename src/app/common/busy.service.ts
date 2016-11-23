@@ -5,7 +5,7 @@ export class BusyService {
   busy: boolean = false
 
   setBusy(val:boolean) {
-    console.log(val)
+    console.log('Busy:', val)
     this.busy = val
   }
 

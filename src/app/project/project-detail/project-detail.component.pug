@@ -11,8 +11,11 @@
 
 .row
   .col-md-12
-    label Name
-    .form-control-static(*ngIf="!editMode") {{item.name}}
-    input.form-control(*ngIf="editMode", [(ngModel)]="buffItem.name")
+    form.form-horizontal
+      .form-group
+        label.control-label.col-sm-1(for="name") Name
+        .col-sm-11
+          .form-control-static(*ngIf="!editMode" id="name") {{item.name}}
+          input.form-control(*ngIf="editMode", [(ngModel)]="buffItem.name" name="name" id="name")
 
 router-outlet

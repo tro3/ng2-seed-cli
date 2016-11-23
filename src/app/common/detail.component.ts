@@ -7,10 +7,10 @@ import { BusyService } from './busy.service'
 @Component({
 })
 export class DetailComponent {
-  collection = "Collection needed"
+  collection: string = "Collection needed"
   item: any
   buffItem: any
-  editMode = false
+  editMode: boolean = false
 
   constructor(
     protected route: ActivatedRoute,
@@ -21,13 +21,13 @@ export class DetailComponent {
   ngOnInit() {
     this.route.data.forEach((data) => {
       this.item = data['item']
-      this.buffItem = Object.assign(this.item)
+      this.buffItem = Object.assign({}, this.item)
     })
   }
 
   edit() {
     this.editMode = true
-    this.buffItem = Object.assign(this.item)
+    this.buffItem = Object.assign({}, this.item)
   }
 
   cancel() {
