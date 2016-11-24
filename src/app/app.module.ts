@@ -4,10 +4,11 @@ import { HttpModule } from '@angular/http'
 import { NgModule } from '@angular/core'
 import { RouterModule } from '@angular/router'
 
+import { AppCommonModule } from './common/app-common.module'
 import { AppComponent } from './app.component'
-import { CommonModule } from './common/common.module'
 import { HomeComponent } from './home/home.component'
 import { ProjectModule } from './project/project.module'
+import { ShipmentModule } from './shipment/shipment.module'
 import { rootRouterConfig } from './app.routes'
 
 @NgModule({
@@ -16,12 +17,20 @@ import { rootRouterConfig } from './app.routes'
     HomeComponent
   ],
   imports: [
+    AppCommonModule,
     BrowserModule,
-    CommonModule,
     FormsModule,
     HttpModule,
     ProjectModule,
-    RouterModule.forRoot(rootRouterConfig)
+    RouterModule.forRoot(rootRouterConfig),
+    ShipmentModule,
+    ShipmentModule,
+    ShipmentModule,
+    ShipmentModule,
+    ShipmentModule,
+    ShipmentModule,
+    ShipmentModule,
+    ShipmentModule
   ],
   providers   : [ ],
   bootstrap   : [AppComponent]

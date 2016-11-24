@@ -1,6 +1,8 @@
 import {Component} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router'
 
+import { ApiService } from '../../common/api.service'
+import { BusyService } from '../../common/busy.service'
 import { ListComponent } from '../../common/list.component'
 
 @Component({
@@ -12,7 +14,9 @@ export class ProjectListComponent extends ListComponent {
 
   constructor(
     protected route: ActivatedRoute,
+    protected api: ApiService,
+    protected busy: BusyService,
     protected router: Router,
-  ) {super(route, router)}
+  ) {super(route, api, busy, router)}
 
 }

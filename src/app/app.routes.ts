@@ -7,5 +7,6 @@ import { ShipmentRoutes } from './shipment/shipment.routes'
 export const rootRouterConfig: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
-  ...ProjectRoutes
+  ...ProjectRoutes,
+  ...ShipmentRoutes
 ];

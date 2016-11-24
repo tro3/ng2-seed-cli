@@ -1,0 +1,12 @@
+// modal pug
+
+.modal.fade([ngClass]="{in:show}", [ngStyle]="{display:(show)?'block':'none'}")
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h4 {{title}}
+      .modal-body
+        ng-content
+      .modal-footer
+        button.btn.btn-primary((click)="_ok()") OK
+        button.btn.btn-default(*ngIf="cancel", (click)="_cancel()") Cancel
