@@ -3,19 +3,22 @@
 .row
   .col-md-12
     .pull-left
-      h3 ProjectDetailComponent
+      h3 ProjectDetailComponent: {{ctrl.item.name || 'No item resolved'}}
     .pull-right
-      button.btn.btn-default(*ngIf="!editMode", (click)="edit()") Edit
-      button.btn.btn-default(*ngIf="editMode", (click)="save()") Save
-      button.btn.btn-default(*ngIf="editMode", (click)="cancel()") Cancel
+      button.btn.btn-default(*ngIf="!ctrl.editMode", (click)="ctrl.edit()") Edit
+      button.btn.btn-default(*ngIf="ctrl.editMode", (click)="ctrl.save()") Save
+      button.btn.btn-default(*ngIf="ctrl.editMode", (click)="ctrl.cancel()") Cancel
+
 
 .row
-  .col-md-12
-    form.form-horizontal
-      .form-group
-        label.control-label.col-sm-1(for="name") Name
-        .col-sm-11
-          .form-control-static(*ngIf="!editMode" id="name") {{item.name}}
-          input.form-control(*ngIf="editMode", [(ngModel)]="buffItem.name" name="name" id="name")
+  .col-md-2
+    ul.nav.nav-pills.nav-stacked
+      li(routerLinkActive="active")
+        a(routerLink="description") Description
+      li(routerLinkActive="active")
+        a(routerLink='info') Info
+      li(routerLinkActive="active")
+        a(routerLink='notes') Notes
 
-router-outlet
+  .col-md-10
+    router-outlet

@@ -14,8 +14,7 @@ import { ProjectListModule } from './project-list/project-list.module'
   declarations: [
     ProjectComponent
   ],
-  providers: [
-  ],
+  providers: [ ],
   exports: [
     ProjectComponent
   ],

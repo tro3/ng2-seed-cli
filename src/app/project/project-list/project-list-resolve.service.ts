@@ -13,7 +13,7 @@ export class ProjectListResolveService implements Resolve<any> {
   ) {}
 
   resolve(route: ActivatedRouteSnapshot): Observable<any> {
-    return this.api.find('projects')
+    return this.api.find('projects', route.params['query'])
   }
 
 }

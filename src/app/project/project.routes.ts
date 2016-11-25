@@ -9,8 +9,8 @@ export const ProjectRoutes: Routes = [
     path: 'projects',
     component: ProjectComponent,
     children: [
-      ...ProjectDetailRoutes,
-      ...ProjectListRoutes
-    ]
+      ...ProjectListRoutes,
+      ...ProjectDetailRoutes
+    ],
   }
 ]

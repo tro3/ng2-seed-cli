@@ -7,13 +7,13 @@ import { ListComponent } from '../../common/list.component'
 import { ModalComponent } from '../../common/modal/modal.component'
 
 @Component({
-  selector: 'ng2-cli-project-list',
-  templateUrl: 'project-list.component.pug',
-  styleUrls: ['project-list.component.css'],
+  selector: 'ng2-cli-shipment-list',
+  templateUrl: 'shipment-list.component.pug',
+  styleUrls: ['shipment-list.component.css'],
 })
-export class ProjectListComponent extends ListComponent {
+export class ShipmentListComponent extends ListComponent {
   @ViewChild(ModalComponent) modal
-  collection = "projects"
+  collection = "shipments"
   default = {name:''}
 
   constructor(

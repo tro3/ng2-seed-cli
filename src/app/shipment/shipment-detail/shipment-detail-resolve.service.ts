@@ -5,7 +5,7 @@ import { Router, Resolve, ActivatedRouteSnapshot } from '@angular/router'
 import { ApiService } from '../../common/api.service'
 
 @Injectable()
-export class ProjectDetailResolveService implements Resolve<any> {
+export class ShipmentDetailResolveService implements Resolve<any> {
 
   constructor(
     private router: Router,
@@ -13,7 +13,7 @@ export class ProjectDetailResolveService implements Resolve<any> {
   ) {}
 
   resolve(route: ActivatedRouteSnapshot): Observable<any> {
-    return this.api.findOneById('projects', route.params['id'])
+    return this.api.findOneById('shipments', route.params['id'])
   }
 
 }

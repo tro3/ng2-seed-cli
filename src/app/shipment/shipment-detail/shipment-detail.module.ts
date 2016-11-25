@@ -4,9 +4,9 @@ import { NgModule } from '@angular/core'
 import { RouterModule } from '@angular/router'
 
 import { AppCommonModule } from '../../common/app-common.module'
-import { ProjectListAuthService } from './project-list-auth.service'
-import { ProjectListComponent } from './project-list.component'
-import { ProjectListResolveService } from './project-list-resolve.service'
+import { ShipmentDetailAuthService } from './shipment-detail-auth.service'
+import { ShipmentDetailComponent } from './shipment-detail.component'
+import { ShipmentDetailResolveService } from './shipment-detail-resolve.service'
 
 @NgModule({
   imports: [
@@ -16,16 +16,16 @@ import { ProjectListResolveService } from './project-list-resolve.service'
     RouterModule
   ],
   declarations: [
-    ProjectListComponent
+    ShipmentDetailComponent
   ],
   providers: [
-    ProjectListAuthService,
-    ProjectListResolveService
+    ShipmentDetailAuthService,
+    ShipmentDetailResolveService
   ],
   exports: [
-    ProjectListComponent
+    ShipmentDetailComponent
   ],
 })
-export class ProjectListModule {
+export class ShipmentDetailModule {
 
 }
